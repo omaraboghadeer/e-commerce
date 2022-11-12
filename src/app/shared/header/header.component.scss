@@ -1,0 +1,15 @@
+.search {
+    max-width: 450px;
+    border-radius: 30px;
+    background: #EDEDF0;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+
+    input[type="search"] {
+        width: 100%;
+        background: transparent;
+
+        &:focus {outline: none;}
+    }
+}

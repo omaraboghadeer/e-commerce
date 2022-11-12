@@ -1,0 +1,17 @@
+<div class="filter mb-3">
+
+    <a class="d-flex align-items-center justify-content-between" data-bs-toggle="collapse" href="#collapseExample{{filter.id}}" role="button" 
+        aria-expanded="false" [attr.aria-controls]="'collapseExample'+filter.id"
+    >
+        <h6>{{filter.title}}</h6>
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <div class="collapse show px-2" id="collapseExample{{filter.id}}">
+        <div class="checbox-group" *ngFor="let item of filter.values; index as i">
+            <input type="radio" name="{{filter.title}}" id="{{item}}{{i}}" value="{{item}}" class="me-2" (change)="onChange($event)">
+            <label for="{{item}}{{i}}">{{item}}</label>
+        </div>
+    </div>
+
+</div>

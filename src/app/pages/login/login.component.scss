@@ -1,0 +1,102 @@
+.bg-image {
+    
+    background: #6C63FF;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    
+}
+
+
+.login {
+    h1 {
+        span {color: #6C63FF;}
+        color: #3F3F3F;
+        font-weight: bolder;
+    }
+
+    .g-btn {
+        background: transparent;
+        border-radius: 30px;
+        border-width: 2px;
+        text-align: center;
+        border-color: #7A7A7A;
+        color: #7A7A7A;
+        font-size: 20px;
+        font-weight: bold;
+        width: 330px;
+        padding: 5px 0 !important;
+        margin-bottom: 20px;
+    }
+
+    .line {
+        position: relative;
+        display: block;
+        text-align: center;
+        font-weight: bold;
+
+        &::before {
+            content: '';
+            width: 45%;
+            height: 2px;
+            background-color: #7A7A7A;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+        &::after {
+            content: '';
+            width: 45%;
+            height: 2px;
+            background-color: #7A7A7A;
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+    }
+
+
+    form {
+        margin-top: 17px;
+
+        label {
+            color: #6C63FF;
+            font-weight: bold;
+            font-size: 18px;
+            margin-inline-start: 10px;
+        }
+
+        .form-control {
+            border-radius: 30px;
+            border-color: #7A7A7A;
+            border-width: 2px;
+
+            &:invalid, &.invalid {
+                border-color: #dc3545;
+            }
+        }
+
+        .btn-link {
+            span {color: #6C63FF;}
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #3F3F3F;
+        }
+
+        .submit-btn {
+            color: white;
+            text-align: center;
+            width: 280px;
+            background: #6C63FF;
+            border-radius: 65px;
+            padding: 5px 0 !important;
+        }
+    }
+}

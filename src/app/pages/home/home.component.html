@@ -1,0 +1,34 @@
+<div class="row">
+    <!-- Filters -->
+    <div class="col-lg-3 col-12">
+        <app-filter *ngFor="let filter of filters" [filter]="filter" (onSelectFilter)="onChangeFilter($event)"></app-filter>
+    </div>
+
+
+    <!-- Products -->
+    <div class="col-lg-9 col-md-12 col-12 h-100">
+        <div class="shadow rounded p-3">
+
+            <div class="form-floating">
+                <select class="form-select" id="floatingSelectGrid">
+                    <option selected>price</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <label for="floatingSelectGrid">SORT BY</label>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-12" *ngFor="let product of products; index as i;">
+                    <app-product [product]="product"></app-product>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "default" color = "#fff" type = "fire" [fullScreen] = "true"></ngx-spinner>

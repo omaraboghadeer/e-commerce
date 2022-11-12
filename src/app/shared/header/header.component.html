@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg bg-transparent">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/">
+            <img src="assets/images/logo.png" height="40" width="104" alt="website logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/">Sell on Shopka</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="login">Register</a>
+                </li>
+            </ul>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" class="ms-2 border-0" placeholder="Search" (keypress)="onSearch($event)">
+            </div>
+
+            <button class="btn btn-link">Consumer Electronics</button>
+
+            <div class="ms-auto">
+                <button class="seamlabs-btn" routerLink="login">sign in</button>
+                <button class="seamlabs-btn custom-shadow ms-2 me-2 position-relative">
+                    My Cart
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        {{cart_length}}
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </button>
+                <picture>
+                    <img src="assets/images/user.jpg" height="40" width="40" class="rounded-circle" alt="user image">
+                </picture>
+            </div>
+        </div>
+    </div>
+</nav>
